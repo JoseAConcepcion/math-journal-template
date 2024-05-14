@@ -1,0 +1,514 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,twoside]{rcmart} % Document font size and equations flushed left
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+\usepackage{orcidlink}
+\usepackage{bicaption}[2011/10/30 v1.0a]
+\usepackage{babel}[spanish]
+
+% \captionsetup[bi-first]{bi-first}
+% \captionsetup[bi-second]{bi-second}
+
+\DeclareCaptionOption{bi-first}[]{%
+  \def\tablename{Tabla}%
+  \def\figurename{Figura}}
+\DeclareCaptionOption{bi-second}[]{%
+  \def\tablename{Table}%
+  \def\figurename{Figure}}
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,0} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+\hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=blue,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+
+%----------------------------------------------------------------------------------------
+%	Theorems (Uncomment for english theorems) (DON'T EDIT)
+%----------------------------------------------------------------------------------------
+
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+%\newtheorem{axiom}[theorem]{Axiom}
+%\newtheorem{case}[theorem]{Case}
+%\newtheorem{claim}[theorem]{Claim}
+%\newtheorem{conclusion}[theorem]{Conclusion}
+%\newtheorem{condition}[theorem]{Condition}
+%\newtheorem{conjecture}[theorem]{Conjecture}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{criterion}[theorem]{Criterion}
+%\newtheorem{definition}[theorem]{Definition}
+%\newtheorem{example}[theorem]{Example}
+%\newtheorem{exercise}[theorem]{Exercise}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{notation}[theorem]{Notation}
+%\newtheorem{problem}[theorem]{Problem}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{remark}[theorem]{Remark}
+%\newtheorem{solution}[theorem]{Solution}
+%\newtheorem{summary}[theorem]{Summary}
+%\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+%----------------------------------------------------------------------------------------
+%	Teoremas (NO EDITAR)
+%----------------------------------------------------------------------------------------
+
+\newtheorem{theorem}{Teorema}
+\newtheorem{acknowledgement}[theorem]{Afirmaci�n}
+\newtheorem{axiom}[theorem]{Axioma}
+\newtheorem{case}[theorem]{Caso}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusi�n}
+\newtheorem{condition}[theorem]{Condici�n}
+\newtheorem{conjecture}[theorem]{Conjetura}
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{criterion}[theorem]{Criterio}
+\newtheorem{definition}[theorem]{Definici�n}
+\newtheorem{example}[theorem]{Ejemplo}
+\newtheorem{exercise}[theorem]{Ejercicio}
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{notation}[theorem]{Notaci�n}
+\newtheorem{problem}[theorem]{Problema}
+\newtheorem{proposition}[theorem]{Proposici�n}
+\newtheorem{remark}[theorem]{Observaci�n}
+\newtheorem{solution}[theorem]{Soluci�n}
+\newtheorem{summary}[theorem]{Sumario}
+\newenvironment{proof}[1][Demostraci�n]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+%\newcommand{\dualcap}[2]{{\selectlanguage{spanish}\caption{#1}}\addtocounter{\@captype}{-1}\captionsetup{labelfont=it}\caption{#2}}
+%\NewDocumentCommand{\encaption}{ o  m }{{\selectlanguage{english}%
+%\IfNoValueTF{#1}{\caption[#2]{#2}}{\caption[#1]{#2}}
+%}\addtocounter{\@captype}{-1}}
+%\makeatother
+
+%----------------------------------------------------------------------------------------
+%	Informaci�n sobre la Revista (NO EDITAR)
+%----------------------------------------------------------------------------------------
+
+\setcounter{page}{1}
+\SectionInfo{Art�culo Original} % Elegir una de las secciones de la revista: Ense�anza, Art�culo de revisi�n, Comunicaci�n Breve, Presentaci�n de Tecnolog�a, Art�culo de Opini�n, Divulgaci�n Cient�fica, Entrevista, Carta al Editor, Nota Hist�rica, Rese�a de libro, Proyectos de Investigaci�n, Resumen de Tesis, Actualidad, Anuncios, Obituario
+\JournalInfo{Ciencias Matem�ticas, Vol. XX, No. X, XXXX, Pag. 1-\pageref{LastPage}}
+\PaperUrl{\href{https://revistas.uh.cu/rcm/index}{https://revistas.uh.cu/rcm/index}}
+\Archive{Recibido XX-XXXX, Aceptado XX-XXXX}
+
+%----------------------------------------------------------------------------------------
+% T�tulo en Espa�ol e Ingl�s obligatorio
+%----------------------------------------------------------------------------------------
+
+\PaperTitle{Plantilla Para Un Trabajo a Publicarse en La Revista Ciencias Matem�ticas}
+\PaperTitleEng{Template for a Work to Be Submitted to Ciencias Matem�ticas journal}
+
+%----------------------------------------------------------------------------------------
+%	Autores y afiliaciones
+%----------------------------------------------------------------------------------------
+
+\Authors{Jos� J. Apeuno Apedos\textsuperscript{1}\orcidlink{0000-0000-0000-0000}, Juan Eduardo Apetres Apecuatro\textsuperscript{2}*\orcidlink{0000-0000-0000-0001}, Josefa A. Apecinco Apeseis\textsuperscript{1}\orcidlink{0000-0000-0000-0002}, Juana Rosa Apesiete Apeocho\textsuperscript{3}\orcidlink{0000-0000-0000-0003}}
+\AuthorsAbbrev{Apeuno Apedos, Apetres Apecuatro, Apecinco Apeseis, Apesiete Apeocho}
+\affiliation{\textsuperscript{1}Departamento de Matem�tica, Universidad de Aqu��, Aqu�mismo, Cuba. Email: \href{mailto:jjapes12@uaquim.edu.cu}{jjapes12@uaquim.edu.cu}} % Author affiliation
+\affiliation{\textsuperscript{2}Departamento de Computaci�n, Universidad de All�, All�, Cuba. Email:  \href{mailto:juanapes34@alla.edu.cu}{juanapes34@alla.edu.cu}} % Author affiliation
+\affiliation{\textsuperscript{3}Departamento de Alimentos, Universidad de Acull�, Mayabeque, Cuba. Email:  \href{mailto:juanapes34@alla.edu.cu}{juanaapes78@aculla.edu.cu}}
+\affiliation{*\textbf{Autor para Correspondencia (\textit{Corresponding Author})}} % Corresponding author
+\affiliation{\medskip \textbf{Editado por:} Nombre del Editor de la Secci�n, Instituci�n, Pa�s. (\underline{este campo lo modifica el editor})}
+
+%----------------------------------------------------------------------------------------
+%	Palabras Clave en Espa�ol e Ingl�s obligatorias
+%----------------------------------------------------------------------------------------
+
+\Pclaves{Clave1, Clave2, Clave3, Clave4, Clave5 \underline{(ordenadas alfab�ticamente)}}
+\Keywords{Keyword1, Keyword2, Keyword3, Keyword4, Keyword5 \underline{(in alphabetical order)}}
+\MSC{MSC1, MSC2, MSC3, MSC4, MSC5 \underline{(ordenadas de lo general a lo particular)}}
+
+%----------------------------------------------------------------------------------------
+%	Resumen en espa�ol
+%----------------------------------------------------------------------------------------
+
+\Resumen{En el presente trabajo se presenta la plantilla \LaTeX para una contribuci�n a ser sometida a la revista Ciencias Matem�ticas que publica la Facultad de Matem�tica y Computaci�n de la Universidad de La Habana de conjunto con la Sociedad Cubana de Matem�tica y Computaci�n. Lea atentamente las instrucciones a continuaci�n para producir un trabajo que cumpla con las especificaciones de una publicaci�n en Ciencias Matem�ticas. Note que la �nica forma de someter su trabajo a la revista es a trav�s del uso estricto de esta plantilla. Si desconoce el sistema \LaTeX apr�ndalo o encuentre quien le escriba su texto en este formato.}
+
+%----------------------------------------------------------------------------------------
+%	Abstract 
+%----------------------------------------------------------------------------------------
+
+\Abstract{The present work delivers the \LaTeX template for a contribution to the journal Ciencias Matem�ticas published by the Faculty of Mathematics and Computer Science of the University of Havana in conjunction with the Cuban Society of Mathematics and Computer Science. Read carefully the following instructions in order to produce a work that meets the specifications of a publication in Ciencias Matem�ticas. Note that the only way to submit your work to the journal is through the strict use of this template. If you do not know the \LaTeX system learnt it or find someone that typesets your text in its format for you.}
+
+%----------------------------------------------------------------------------------------
+
+\Autocita{Apeuno Apedos, J. J., Apetres Apecuatro, J. E., Apecinco Apesis, J. A.,\& Apesite Apeocho, J. R. (202X). Plantilla Para Un Trabajo a Publicarse en La Revista Ciencias Matem�ticas. \textit{Ciencias Matem�ticas}, X(X), X--XX. Recuperado a partir de \url{https://revistas.uh.cu/rcm/} (\underline{este campo lo modifica el editor})}
+
+%\pubfoot{%
+%Author contributions: JdRG and FS initiated the project.
+%RG and JdRG derived the theory and performed experiments. FS prepared figures and wrote the manuscript, with contributions from all authors.\\
+%\\
+%The authors declare no conflict of interest.\\
+%\\
+%\textsuperscript{1}To whom correspondence should be addressed. E-mail:
+%mail@dev/null\\
+%\\
+%This article contains supporting information online at XXXX.
+%}
+%
+%\significance{%
+%The geostrophic equations are a simplified form of the Navier-Stokes equations and are highly important in the study of ocean currents. Here, we consider almost sharp fronts for the surface geostrophic equation and perform computational experiments to investigate their behaviour.
+%}
+
+
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+
+\maketitle % Print the title and abstract box
+
+%\tableofcontents % Print the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\selectlanguage{spanish}
+\section*{Introducci�n} % The \section*{} command stops section numbering
+\addcontentsline{toc}{section}{Introducci�n} % Adds this section to the table of contents
+
+La presente plantilla especifica la forma de un art�culo cient�fico para la revista Ciencias Matem�ticas. Como podr� apreciar en el PDF asociado a este documento la revista se imprime a dos columnas por lo cual se debe tener especial cuidado con f�rmulas matem�ticas, tablas y figuras a aparecer en el texto. En las pr�ximas secciones encontrar� m�s informaci�n al respecto.
+
+En el pre�mbulo de este documento (en su formato tex) aparecen el t�tulo, los autores, sus afiliaciones y las palabras clave. Las exigencias respecto a estos �tems son las siguientes:
+\begin{itemize}
+	\item El t�tulo debe aparecer en los idiomas castellano e ingl�s en ese orden. Use las instrucciones de \LaTeX apropiadas (vea pre�mbulo de este documento en su formato tex (VeaPreTex)) para escribirlos.
+	\item El formato de escritura de los t�tulos es \emph{Tipo T�tulo} lo cual quiere decir que algunas palabras aparecen con primera letra en may�scula y otras no tal como ocurre en los t�tulos de este trabajo. (VeaPreTex).
+	\item En los nombres de los autores se deben incluir primer y segundo apellidos (para aquellos que tenemos un segundo). En nombres compuestos se puede abreviar el segundo nombre (VeaPreTex). Si tiene un nombre compuesto integrado por m�s de dos nombres omita, por favor, del tercero en adelante.
+	\item Se requiere de palabras clave tanto en castellano como en ingl�s (VeaPreTex). Separe estas mediante comas y t�mese el trabajo, por favor, de que sean adecuadas y relevantes para la indexaci�n de su trabajo es buscadores.
+	\item Aparte de lo especificado en los puntos anteriores no cambie alguna otra cosa en el pre�mbulo de su documento tex excepto para especificar el uso de alg�n paquete \LaTeX mediante una instrucci�n \texttt{usepackage} o definir alg�n nuevo macro. Esto presupone que Usted sabe lo que hace, m�s a�n, que sabe \LaTeX. 
+\end{itemize}
+
+Note que esta secci�n, nombrada \emph{Introducci�n}, no debe aparecer numerada. Por ello se emplea la instrucci�n \texttt{section*} para definirla. Si su trabajo incluye como primera secci�n una de nombre "Introducci�n" no la numere. En cualquier otro caso, es decir si va a emplear otro nombre para esta secci�n, use la instrucci�n \texttt{section}.
+
+Si usted sabe \LaTeX y conoce de los requerimientos de textos a dos columnas en este sistema ya ley� lo suficiente. Solo recuerde el cuidado especial que requieren f�rmulas, tablas, gr�ficos o im�genes demasiado grandes. En otras palabras, use con juicio las instrucciones \texttt{widetext}, \texttt{table*} y \texttt{figure*} ya que estas producen una divisi�n del texto en la p�gina que puede resultar dificil de leer.
+
+%------------------------------------------------
+
+\section{Mi primera secci�n numerada}
+
+Esta ser�a la primera secci�n numerada de su trabajo si empez� con una de nombre "Introducci�n". En ella le mostraremos como definir subsecciones y otras formas de dividir su texto. El caso de las palabras en un nombre de secci�n, subsecci�n etc. ser� el mismo de cualquier oraci�n en castellano. No se escriben todas las palabras en may�sculas o se emplea TitleCase. A continuaci�n un poco del texto en lat�n que se emplea com�nmente cuando uno no tiene nada significativo que escribir.
+
+\begin{figure*}[ht]\centering % Using \begin{figure*} makes the figure take up the entire width of the page
+	\includegraphics[width=\linewidth]{view}
+	\bicaption{Imagen a dos columnas.}{Two-column image.}
+	\label{fig:view}
+\end{figure*}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Aqu� haremos una referencia a la figura a una columna \ref{fig:view}. Observe que se emplea la instrucci�n \texttt{figure*} y que una figura siempre debe tener un \texttt{caption}. El uso de \texttt{figure*} debe ser limitado.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+A continuaci�n un teorema con su demostraci�n. Tener un teorema original para enunciar le concede rigor a su trabajo (tanto en Matem�tica como en Ciencia de la Computaci�n). Aqu� le va uno generado autom�ticamente por Matgen. Primero un par de definiciones (si Usted no tiene un teorema al menos una definici�n debe tener, de que estamos si no leyendo).
+
+\begin{definition}
+	Suppose we are given a co-Milnor ideal ${N^{(\delta)}}$.  We say a sub-regular manifold $\hat{G}$ is \textbf{holomorphic} if it is contra-regular, Artin and affine.
+\end{definition}
+
+\begin{definition}
+	An anti-essentially sub-reversible subgroup $B''$ is \textbf{meager} if $\Delta$ is degenerate.
+\end{definition}
+
+El Lema a continuaci�n es esencial en el resultado final.
+
+\begin{lemma}\label{lem1}
+	There exists a separable and Wiener finitely degenerate subgroup.
+\end{lemma}
+
+\begin{proof} 
+	This proof can be omitted on a first reading.  Note that if $P$ is essentially maximal and admissible then $d$ is not comparable to $\bar{X}$. Thus $\delta \sim V$. Trivially, every Peano--Hilbert, uncountable class is semi-combinatorially co-isometric. By results of \cite{cite:4}, if the Riemann hypothesis holds then there exists a meager discretely measurable, multiply connected class.
+	
+	By results of \cite{cite:7,cite:5,cite:8}, if ${\mathcal{{S}}_{\kappa,F}}$ is simply right-covariant then there exists a simply Riemannian and Minkowski sub-Riemannian, partially measurable subgroup. In contrast, if $Z = q$ then $E = \aleph_0$. Next, if $\gamma$ is not homeomorphic to $\Omega$ then $l \to \mathbf{{n}}$. Obviously,
+	 \begin{align}
+	 L \left( | {e_{\phi,a}} |^{-3}, \dots, \frac{1}{-1} \right) & \ge \frac{\frac{1}{0}}{\| \hat{\mathfrak{{i}}} \| \pm \mathcal{{C}}} \\ 
+	 & = \overline{\psi} \\ 
+	 & \ge \int \overline{e \wedge U} \,d \kappa .
+	 \end{align} 
+	 So if $a$ is Kovalevskaya and Russell then $\mathfrak{{v}}$ is onto and right-smooth. Moreover, if $S$ is homeomorphic to $J$ then every nonnegative monodromy acting co-globally on an arithmetic, pseudo-convex equation is super-countably stable, Gaussian and continuous.
+	This completes the proof.
+\end{proof}
+
+Considerando el Lema \ref{lem1} podemos plantear el siguiente teorema.
+
+\begin{theorem}
+	Let $r$ be an almost everywhere contra-surjective, Artin, finitely semi-Riemannian system.  Assume we are given a totally Beltrami line $\bar{\mathfrak{{u}}}$.  Then $Y > 1$.
+\end{theorem}
+
+\begin{proof} 
+	This is left as an exercise to the reader.
+\end{proof}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum. 
+
+La ecuaci�n siguiente sucede de forma natural y secuencial a las precedentes
+\begin{equation}
+\cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
+\label{eq:refname2}
+\end{equation}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum. % Dummy text
+
+Una lista enumerada contiene una forma de enumeraci�n senectus et netus et malesuada fames
+\begin{enumerate} % [noitemsep] removes whitespace between the items for a compact look
+\item First item in a list
+\item Second item in a list
+\item Third item in a list
+\end{enumerate}
+
+\subsection{Una subsecci�n de la secci�n en la que nos encontramos $:-)$}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum. 
+
+Una ecuaci�n a dos columnas es la que sigue, observe la divisi�n de p�gina que se originar� 
+
+\begin{widetext}
+\begin{equation}
+a=\frac{a}{b}\sqrt{\cos ^{2}(a+b)+\sin
+	^{2}(a+b)+b^{2}e^{-x}\sum_{k=0}^{\infty }\frac{x^{k}}{k!}-\lim_{\alpha
+		\rightarrow 0}\frac{\sin \left( \alpha \right) }{\alpha }}.
+\end{equation}
+\end{widetext}
+
+Este es el texto a aparecer a continuaci�n de la ecuaci�n a dos columnas. Observe que las medias l�neas arriba indican una divisi�n de la p�gina. Trate de usar la instrucci�n \texttt{widetext} lo menos posible.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+\subsubsection{Una subsecci�n de la subsecci�n}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Para una figura a una columna vea la \ref{fig:results}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{results}
+\bicaption{Funci�n coseno.}{Cosine function.}
+\label{fig:results}
+\end{figure}
+
+Con esto termina la secci�n. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
+
+\section{Resultados alcanzados en el estudio de la igualdad $2 + 2 = 4$}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+\subsection{Otros resultados}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Una tabla para una sola columna es la \ref{tab:label}. Recuerde que el \LaTeX tablas y figuras son floats y su emplazamiento lo decide el sistema. 
+
+Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+\begin{table}[hbt]
+\bicaption{Tabla Peque�a.}{Small Table.}
+\begin{center}
+\begin{tabular}{llr}\hline\hline
+First name & Last Name & Grade \\\hline\hline
+John & Doe & $7.5$ \\
+Richard & Miles & $2$ \\\hline\hline
+\end{tabular}
+\end{center}
+\label{tab:label}
+\end{table}
+
+Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
+
+Una lista tipo \texttt{description}
+\begin{description}
+\item[Word] Definition
+\item[Concept] Explanation
+\item[Idea] Text
+\end{description}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Una tabla que aparece a dos columnas es la \ref{tab:label2}. Se obtiene mediante el environment \texttt{table*}
+
+\begin{table*}[hbt]
+\bicaption{Tabla Grande.}{Large Table.}
+\begin{center}
+\begin{tabular}
+[c]{lcrlrl}\hline\hline
+Columna 1 & Columna 2 & Columna 3 & Columna 4 & Columna 5 & Columna
+6\\\hline\hline
+$111$ & $222$ & $333$ & $444$ & $555$ & $666$\\
+$111$ & $222$ & $333$ & $444$ & $555$ & $666$\\
+$111$ & $222$ & $333$ & $444$ & $555$ & $666$\\\hline\hline
+\end{tabular}
+\end{center}
+\label{tab:label2}
+\end{table*}
+
+Analysts agree that adaptive technology are an interesting new topic in the field of e-voting technology, and scholars concur. On the other hand, an appropriate challenge in networking is the investigation of vacuum tubes. Further, contrarily, this solution is rarely considered
+unfortunate. As a result, decentralized archetypes and randomized algorithms  synchronize in order to accomplish the simulation of object-oriented languages.
+
+Here we understand how e-commerce  can be applied to the emulation of scatter/gather I/O.  we view cryptography as following a cycle of four phases: improvement, storage, construction, and improvement. Next, indeed, spreadsheets  and active networks  have a long history of connecting in this manner.  It should be noted that OrlopKavass is copied from the study of lambda calculus. This combination of properties has not yet been simulated in related work.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+A number of related frameworks have refined the development of virtual machines, either for the exploration of Boolean logic \cite{cite:3} or for the study of online algorithms \cite{cite:4, cite:5}. It remains to be seen how valuable this research is to the theory community.  Li et al.  originally articulated the need for the understanding of suffix
+trees \cite{cite:6, cite:7, cite:8}.  Nehru presented several reliable methods \cite{cite:7}, and reported that they have limited effect on multi-processors  \cite{cite:9}. Thus, if latency is a concern, OrlopKavass has a clear advantage.  Our methodology is broadly related
+to work in the field of robotics by James Gray \cite{cite:10}, but we view it from a new perspective: evolutionary programming \cite{cite:11}. Clearly, the class of frameworks enabled by our methodology is fundamentally different from related solutions
+\cite{cite:12}.
+
+ OrlopKavass relies on the key design outlined in the recent infamous work by G. White et al. in the field of cyberinformatics. This is an essential property of our algorithm. Next, the design for our system consists of four independent components: fiber-optic cables, ambimorphic methodologies, object-oriented languages, and introspective algorithms. Consider the early framework by V. Li et al.; our framework is similar, but will actually realize this mission \cite{cite:16}.  Rather than caching the refinement of e-business that made deploying and possibly simulating Internet QoS a reality, our approach chooses to prevent metamorphic archetypes. This is an extensive property of OrlopKavass. See our prior technical report
+\cite{cite:2} for details.
+
+The model for OrlopKavass consists of four independent components: public-private key pairs, stable symmetries, the deployment of extreme programming, and superpages.  We consider an application consisting of $n$ red-black trees. Next, despite the results by Harris and White, we can verify that neural networks and digital-to-analog converters are largely incompatible  \cite{cite:10}. The question is, will OrlopKavass satisfy all of these assumptions?  No.
+
+Recuerde que las citas solo se hacen mediante el comando \texttt{cite}. Por ejemplo Figueredo y Wolf \cite{Figueredo:2009dg} demostraron la equivalencia entre $2$ y $2^1$.
+
+Is it possible to extend anti-everywhere degenerate sets? Recent interest in convex, Conway--Maclaurin rings has centered on describing covariant, partially tangential curves. Recently, there has been much interest in the extension of real primes. K. Lee's computation of reducible, sub-unconditionally independent manifolds was a milestone in Euclidean category theory. Is it possible to characterize linear, hyper-almost ultra-positive, combinatorially ultra-bijective ideals? This could shed important light on a conjecture of Wiener.
+
+It is well known that $\Omega \equiv \omega''$. The groundbreaking work of G. Shastri on lines was a major advance. This leaves open the question of reversibility. This could shed important light on a conjecture of Poisson. It would be interesting to apply the techniques of \cite{cite:0} to pointwise additive, canonically hyper-nonnegative, parabolic curves. In \cite{cite:0}, the authors extended contra-Frobenius--Weil, Milnor topoi.
+
+Por �ltimo observe que el estilo de las referencias bibliogr�ficas es \texttt{plain} (\texttt{babplain} en realidad para tener las referencias en castellano). Le recomendamos el empleo de \texttt{BibTeX}. Se a�ade a esta plantilla una bibliograf�a para uso con \texttt{BibTeX} en el fichero sample.bib. 
+
+%------------------------------------------------
+
+\section*{Relevancia del estudio} % The \section*{} command stops section numbering
+	\addcontentsline{toc}{section}{Relevancia del estudio} % Adds this section to the table of contents
+	
+	Coloque aqu� su declaraci�n sobre la relevancia de su investigaci�n. Tenga en cuenta que no debe superar las 120 palabras, pero debe tener una extensi�n m�nima de 50 palabras. No debe incluir referencias.
+	
+	Una declaraci�n de relevancia es una parte esencial de un trabajo de investigaci�n. Explica la importancia y relevancia del estudio para la comunidad acad�mica y el mundo en general. Para redactar una declaraci�n de relevancia convincente, identifique el problema de investigaci�n, explique por qu� es significativo, aporte pruebas de su importancia y destaque su impacto potencial en la investigaci�n, la pol�tica o la pr�ctica futuras. Una declaraci�n de relevancia bien redactada debe comunicar eficazmente el valor de la investigaci�n a los lectores y ayudarles a entender por qu� es importante.
+	
+	Una declaraci�n de importancia responde a la pregunta �C�mo har� avanzar su investigaci�n el conocimiento cient�fico y c�mo repercutir� en la sociedad en general (as� como en poblaciones espec�ficas)? 
+	
+	M�s detalles sobre c�mo redactar una declaraci�n de relevancia del estudio puede encontrarla en \href{https://www.aje.com/arc/how-to-write-a-significance-statement}{https://www.aje.com/\\arc/how-to-write-a-significance-statement}.
+
+\section*{Suplementos} % The \section*{} command stops section numbering
+	\addcontentsline{toc}{section}{Suplementos} % Adds this section to the table of contents
+	
+	En caso de que el art�culo cuente con informaci�n suplementaria (anexos, encuestas, cuestionarios, enlaces a c�digo de programaci�n, etc.) debe colocarse el siguiente texto juntos a los enlaces web para acceder a estos recursos: ``Este art�culo contiene un suplemento de informaci�n en: \underline{(poner enlaces web)}.''
+
+\section*{Agradecimientos} % The \section*{} command stops section numbering
+	\addcontentsline{toc}{section}{Agradecimientos} % Adds this section to the table of contents
+	
+	Aqu� se expresan los agradecimientos a personas a quienes los autores desean reconocer. 
+	
+	Adem�s, debe indicarse qui�n financi� el trabajo, ya sea su empleador, un financiador de subvenciones, un proyecto de investigaci�n, etc. No enumere los fondos que tiene y que no son relevantes para esta investigaci�n espec�fica. Para cada financiador, indique el nombre del financiador, el n�mero de subvenci�n cuando corresponda y la persona a quien se asign� la subvenci�n. Si su trabajo no fue financiado por ninguna subvenci�n, incl�yalo en la secci�n titulada ``Conflictos de inter�s'' y diga: ``Los autores declaran que no hubo subvenciones involucradas en este trabajo''.
+
+\section*{Conflictos de inter�s}
+	\addcontentsline{toc}{section}{Conflictos de inter�s} % Adds this section to the table of contents
+
+	Los art�culos publicados en la revista \textit{Ciencias Matem�ticas} no deben tener contenidos que puedan ser percibidos como ``publicidad''. En esta secci�n se declara cualquier inter�s competitivo financiero, personal o profesional, de cualquiera de los autores que pueda interpretarse como una influencia indebida en el contenido del art�culo. Si no tiene intereses en conflicto, agregue el texto ``Se declara que no existen conflictos de inter�s''.
+
+	Los autores deber�n declarar de forma obligatoria, al final del art�culo, la presencia o no de conflictos de inter�s en relaci�n con el trabajo: si el autor o la instituci�n recibieron pago de terceros para cualquier aspecto de la obra presentada, especificar instituciones y tipo de relaci�n; la existencia de patentes del autor relevantes para el trabajo, as� como otras relaciones, condiciones, circunstancias o actividades que los lectores puedan percibir que influyen en el trabajo.
+
+\section*{Contribuci�n de autor�a}
+	\addcontentsline{toc}{section}{Contribuci�n de autor�a} % Adds this section to the table of contents
+
+	En los art�culos originales de investigaci�n, cuando haya 2 autores o m�s, se deber�n declarar de forma obligatoria los grados de contribuci�n individuales a los resultados que presentan, lo que se har� siguiendo la taxonom�a \textit{CRediT} (\url{https://credit.niso.org}):
+	\begin{description}\setlength{\parskip}{0pt}
+		\item[Conceptualizaci�n] Ideas, formulaci�n o evoluci�n de las metas y objetivos generales de la investigaci�n.
+		
+		\item[Curaci�n de datos] Actividades de gesti�n para anotar (producir metadatos), depurar datos y mantener datos de investigaci�n (incluido el c�digo de software, cuando sea necesario para interpretar los datos en s�) para su uso inicial y posterior reutilizaci�n.
+		
+		\item[An�lisis formal] Aplicaci�n de t�cnicas estad�sticas, matem�ticas, computacionales u otras t�cnicas formales para analizar o sintetizar datos de estudio.
+		
+		\item[Adquisici�n de Financiamiento] Adquisici�n del apoyo financiero para el proyecto que da lugar a esta publicaci�n.
+		
+		\item[Investigaci�n] Llevar a cabo un proceso de investigaci�n, espec�ficamente realizando los experimentos o la recopilaci�n de datos/evidencia.
+		
+		\item[Metodolog�a] Desarrollo o dise�o de metodolog�a; creaci�n de modelos.
+		
+		\item[Administraci�n de proyecto] Responsabilidad de direcci�n y coordinaci�n de la planificaci�n y ejecuci�n de la actividad investigadora.
+		
+		\item[Recursos] Suministro de materiales de estudio, reactivos, materiales, personas, muestras de laboratorio, instrumentaci�n, recursos inform�ticos u otras herramientas de an�lisis.
+		
+		\item[Software] Programaci�n, desarrollo de software; dise�o de programas inform�ticos; implementaci�n del c�digo inform�tico y algoritmos de soporte; prueba de componentes de c�digo existentes.
+		
+		\item[Supervisi�n] Supervisi�n y responsabilidad de liderazgo para la planificaci�n y ejecuci�n de la actividad de investigaci�n, incluida la tutor�a externa al equipo central.
+		
+		\item[Validaci�n] Verificaci�n, ya sea como parte de la actividad o por separado, de la replicaci�n/reproducibilidad general de los resultados/experimentos y otros resultados de la investigaci�n.
+		
+		\item[Visualizaci�n] Elaboraci�n, creaci�n o presentaci�n del trabajo publicado, en concreto visualizaci�n/presentaci�n de datos.
+		
+		\item[Redacci�n: preparaci�n del borrador original] Creaci�n o presentaci�n del trabajo publicado, espec�ficamente redacci�n del borrador inicial (incluida la traducci�n sustantiva).
+		
+		\item[Redacci�n: revisi�n y edici�n] Elaboraci�n, creaci�n o presentaci�n del trabajo publicado por parte del grupo de investigaci�n original, espec�ficamente revisi�n cr�tica, comentario o revisi�n - incluyendo etapas previas o posteriores a la publicaci�n.
+	\end{description}
+		
+	El Comit� Editorial de la revista se reserva el derecho de considerar los efectos de autor�a seg�n las caracter�sticas del art�culo presentado, lo que ser� comunicado a los autores durante el proceso de evaluaci�n.
+
+	\textbf{�C�mo reportar las contribuciones de los autores?:}
+	
+	Se colocan por cada rol las iniciales de los nombres completos de los autores, separados por comas, de los autores que desempe�aron el rol durante la investigaci�n y la redacci�n de la contribuci�n. Si no corresponde o no se aplica un rol, no lo incluya en la declaraci�n. 
+	
+	Por ejemplo:
+		\begin{description}\setlength{\parskip}{0pt}
+			\item[Conceptualizaci�n] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Curaci�n de datos] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[An�lisis formal] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Adquisici�n de Financiamiento] J.J.A.A., J.E.A.A., \\ J.A.A.A., J.R.A.A.
+			
+			\item[Investigaci�n] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Metodolog�a] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Administraci�n de proyecto] J.J.A.A., J.E.A.A., \\ J.A.A.A., J.R.A.A.
+			
+			\item[Recursos] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Software] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Supervisi�n] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Validaci�n] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Visualizaci�n] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Redacci�n: preparaci�n del borrador original] J.J.A.A., \\ J.E.A.A., J.A.A.A., J.R.A.A.
+			
+			\item[Redacci�n: revisi�n y edici�n] J.J.A.A., J.E.A.A., J.A.A.A., J.R.A.A.
+		\end{description}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+% \bibliographystyle{amsplain}
+\bibliographystyle{babplain}
+% \bibliographystyle{plain}
+\bibliography{sample}
+
+%----------------------------------------------------------------------------------------
+
+\begingroup
+	\let\clearpage\relax 
+	\onecolumn 
+	\begin{center}
+		\includegraphics[scale=0.93]{Licencia.pdf}
+	\end{center}
+\endgroup
+
+\end{document}
